@@ -7,7 +7,6 @@ const facultySchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      index: true,
     },
     firstName: { type: String, required: true, trim: true },
     lastName: { type: String, required: true, trim: true },

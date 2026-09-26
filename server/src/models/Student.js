@@ -7,7 +7,6 @@ const studentSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
-      index: true,
     },
     rollNumber: { type: String, trim: true },
     firstName: { type: String, required: true, trim: true },
@@ -56,6 +55,5 @@ const studentSchema = new mongoose.Schema(
 
 studentSchema.index({ department: 1, status: 1 });
 studentSchema.index({ course: 1, currentSemester: 1 });
-studentSchema.index({ studentId: 1 }, { unique: true });
 
 export default mongoose.model('Student', studentSchema);

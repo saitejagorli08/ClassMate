@@ -4,7 +4,7 @@ const paymentSchema = new mongoose.Schema(
   {
     student: { type: mongoose.Schema.Types.ObjectId, ref: 'Student', required: true },
     feeStructure: { type: mongoose.Schema.Types.ObjectId, ref: 'FeeStructure' },
-    receiptNumber: { type: String, unique: true },
+    receiptNumber: { type: String },
     amount: { type: Number, required: true },
     paymentDate: { type: Date, default: Date.now },
     method: {
